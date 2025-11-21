@@ -1,0 +1,49 @@
+name: 检查文件是否存在
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 列出所有文件
+      shell: cmd
+      run: |
+        echo ========================================
+        echo 检查仓库内容
+        echo ========================================
+        echo.
+        echo 当前目录: %CD%
+        echo.
+        echo 查找所有 .sln 文件:
+        dir /s /b *.sln 2>nul
+        echo.
+        echo 检查 src 目录:
+        if exist "src" (
+          echo [OK] src 目录存在
+          dir /b src
+        ) else (
+          echo [ERROR] src 目录不存在
+        )
+        echo.
+        echo 检查 src\Night 目录:
+        if exist "src\Night" (
+          echo [OK] src\Night 目录存在
+          dir /b src\Night
+        ) else (
+          echo [ERROR] src\Night 目录不存在
+        )
+        echo.
+        echo 检查 src\Night\GameServer 目录:
+        if exist "src\Night\GameServer" (
+          echo [OK] src\Night\GameServer 目录存在
+          dir /b src\Night\GameServer | findstr /i "\.sln"
+        ) else (
+          echo [ERROR] src\Night\GameServer 目录不存在
+        )
+
