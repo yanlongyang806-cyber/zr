@@ -1,0 +1,4 @@
+name,dontAssociate,prices,prerequisites
+PRD-STO-M-FI-HoloTribble,1,0 _CrypticPoints,STORecruitUpgradedBonus > 0 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-MasterRecruiter,1,0 _CrypticPoints,STORecruitBilledBonus > 4 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-Recruiter,1,0 _CrypticPoints,STORecruitBilledBonus > 0 || CrypticEmployee == 1 || Press == 1

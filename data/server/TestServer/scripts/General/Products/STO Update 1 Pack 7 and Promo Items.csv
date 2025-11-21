@@ -1,0 +1,20 @@
+name,categories,prices,dontAssociate,internal,prerequisites,keyValueChanges
+PRD-STO-M-CP-BUY-DS9,"ST.All,ST.Captaincostumes, ST.Welcome",280 _CrypticPoints,1,StarTrek,"""""",ST.Costume.Promotion_Costume_Ds9_Male_01 = 1
+PRD-STO-M-CP-BUY-MirrorUniv,"ST.Captaincostumes,ST.All, ST.Welcome",280 _CrypticPoints,1,StarTrek,"""""",STO.Costume.Retailer_Mirror_Universe = 1
+PRD-STO-M-CP-BUY-NXPrefix,"ST.Ships,ST.All, ST.Welcome",80 _CrypticPoints,1,StarTrek,PRD-STO-M-CP-NXPrefix < 1,PRD-STO-M-CP-NXPrefix = 1
+PRD-STO-M-CP-BUY-TNG,"ST.All,ST.Captaincostumes, ST.Welcome",280 _CrypticPoints,1,StarTrek,"""""",ST.Costume.Promotion_Costume_Tng_Tv_Female_01 = 1
+PRD-STO-M-CP-BUY-TOS,"ST.Captaincostumes,ST.All, ST.Welcome",280 _CrypticPoints,1,StarTrek,"""""",ST.Costume.Promotion_Costume_Tos_Male_01 = 1
+PRD-STO-M-EM-BUY-BloodwineEmote,"ST.All,ST.Emotes, ST.Welcome",20 _CrypticPoints,1,StarTrek,PRD-STO-M-EM-BloodwineEmote < 1,PRD-STO-M-EM-BloodwineEmote = 1
+PRD-STO-M-EM-BUY-KahnEmote,"ST.Emotes,ST.All, ST.Welcome",20 _CrypticPoints,1,StarTrek,PRD-STO-M-EM-KahnEmote < 1,PRD-STO-M-EM-KahnEmote = 1
+PRD-STO-M-FI-BUY-FedBorgBridgeOfficer,"ST.All,ST.Fedpersonnel,ST.Items, ST.Welcome",240 _CrypticPoints,1,StarTrek,PRD-STO-M-FI-FedBorgBridgeOfficer < 1,PRD-STO-M-FI-FedBorgBridgeOfficer = 1
+PRD-STO-M-PS-BUY-JoinedTrill,"ST.All,ST.Speciesfed,ST.Speciesklg, ST.Welcome",240 _CrypticPoints,1,StarTrek,"""""",ST.Species.SF_TrillAncient_Male = 1
+PRD-STO-M-FI-BUY-KlingonBorgBridgeOfficer,"ST.Items,ST.All,ST.Klgpersonnel, ST.Welcome",240 _CrypticPoints,1,StarTrek,PRD-STO-M-FI-KlingonBorgBridgeOfficer <  1,PRD-STO-M-FI-KlingonBorgBridgeOfficer =  1
+PRD-STO-M-FI-BUY-UssEnterprise,"ST.Ships,ST.All, ST.Welcome",800 _CrypticPoints,1,StarTrek,PRD-STO-M-FI-UssEnterprise < 1,PRD-STO-M-FI-UssEnterprise = 1
+PRD-STO-M-PT-BUY-Targ,"ST.All,ST.Items,ST.Pets, ST.Welcome",120 _CrypticPoints,1,StarTrek,PRD-STO-M-PT-Targ < 1,PRD-STO-M-PT-Targ = 1
+PRD-STO-M-PT-BUY-Tribble,"ST.Pets,ST.Items,ST.All, ST.Welcome",120 _CrypticPoints,1,StarTrek,PRD-STO-M-PT-Tribble < 1,PRD-STO-M-PT-Tribble = 1
+PRD-STO-M-CP-BUY-Kahn,"ST.All,ST.Captaincostumes, ST.Welcome",0 _CrypticPoints,1,StarTrek,,
+PRD-STO-M-PS-FedCaitian,"ST.Speciesfed,ST.All, ST.Welcome",200 _CrypticPoints,1,StarTrek,,
+PRD-STO-M-EM-EmotePack2,"ST.All,ST.Emotes",120 _CrypticPoints,1,StarTrek,,
+PRD-STO-M-SC-FedSci4v4,"ST.All,ST.Shipcostumes",160 _CrypticPoints,1,StarTrek,,
+PRD-STO-M-SV-CharSlots4,"ST.All,ST.Services",850 _CrypticPoints,1,StarTrek,,
+PRD-STO-M-BRG-Raptor,"ST.All,ST.Bridgepacks, ST.Welcome",80 _CrypticPoints,1,StarTrek,,

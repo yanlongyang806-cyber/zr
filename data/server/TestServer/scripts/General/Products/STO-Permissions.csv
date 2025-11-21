@@ -1,0 +1,75 @@
+name,internal,shards,permissions,categories
+PRD-STO-CE,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-CE-Amazon,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-CE-BestBuy,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-CE-GameStop,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-CS-5days-Temp,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-cs
+PRD-STO-CS-60days-Temp,StarTrek,"Live,playtest",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-cs
+PRD-STO-CS-LifetimePO,StarTrek,"Live,STOLifetime",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-cs
+PRD-STO-DR,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR -DD-Gamersgate,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR -Gamersgate,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-CE,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-CE-Gametap,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-CE-Metaboli,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-CE-Nexway,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-CE-Stardock,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Cryptic,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-D2D,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-Cryptic,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-D2D,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-DigitalRiver,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-Gamersgate,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-RealNetwork,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-Steam,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DD-Tonline,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-DigitalRiver,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Gamersgate,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Gametap,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Metaboli,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Nexway,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-RealNetwork,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Stardock,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Steam,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-SyFy,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-DR-Tonline,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-E-Lifetime,StarTrek,"Live,STOLifetime",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1;XMPPAccess: 1,pc-sto-web
+PRD-STO-PR-Lifetime,StarTrek,"Live,STOLifetime",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-PR-Trial10Day,StarTrek,Live,token: trial;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,pc-sto-web
+PRD-STO-PR-Trial14Day,StarTrek,Live,token: trial;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+PRD-STO-PR-Trial5Day,StarTrek,Live,token: trial;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,pc-sto-web
+PRD-STO-R-30days-TempCS,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-cs
+PRD-STO-R-CA,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-CA-EB,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-CE-EU,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-EU,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-Lifetime,StarTrek,"Live,STOLifetime",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-TempCS,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-TR,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-Amazon,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-Best Buy,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-BestBuy,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-GameStop,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-Target,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-US-Walmart,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-R-ZA,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web
+PRD-STO-T,startrek,playtest,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,pc-sto-web
+STO_Admin,StarTrek,all,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Atari,StarTrek,"LIVE,playtest",AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Employee,StarTrek,all,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1;XMPPAccess: 1,
+STO_GM1,StarTrek,"Live,playtest,qa,tip",AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_GM2,StarTrek,"Live,playtest,qa,tip",AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_GM3,StarTrek,"Live,playtest,qa,tip",AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Level0,StarTrek,all,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Level9,StarTrek,all,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Tip,StarTrek,tip,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_VIP_24x7,StarTrek,playtest,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_WG,StarTrek,"Live,playtest",AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1,
+STO_Level9,StarTrek,all,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,
+STO_Tip,StarTrek,tip,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,
+STO_VIP_24x7,StarTrek,playtest,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,
+STO_WG,StarTrek,"Live,playtest",token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,
+PRD-STO-PR-1months,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-nobill
+PRD-STO-PR-3months,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-nobill
+PRD-STO-PR-6months,StarTrek,Live,token: retail;AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1,pc-sto-web-nobill

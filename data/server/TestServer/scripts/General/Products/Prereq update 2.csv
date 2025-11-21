@@ -1,0 +1,27 @@
+name,dontAssociate,prices,prerequisites
+PRD-STO-M-FI-EMH,1,0 _CrypticPoints,PRD-STO-M-FI-EMH == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-FI-PhaserSatellite,1,0 _CrypticPoints,PRD-STO-M-FI-PhaserSatellite == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-FI-RadiometricConverter,1,0 _CrypticPoints,PRD-STO-M-FI-RadiometricConverter == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-AnagogicAura,1,0 _CrypticPoints,PRD-CO-M-FI-AnagogicAura == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-AntigravBoots,1,0 _CrypticPoints,PRD-CO-M-FI-AntigravBoots == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-BenignSymbiote,1,0 _CrypticPoints,PRD-CO-M-FI-BenignSymbiote == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-EmergencyOrbitalHowitzer,1,0 _CrypticPoints,PRD-CO-M-FI-EmergencyOrbitalHowitzer == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-HyperconvectionFieldGenerator,1,0 _CrypticPoints,PRD-CO-M-FI-HyperconvectionFieldGenerator == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-InbornTenacity,1,0 _CrypticPoints,PRD-CO-M-FI-InbornTenacity == 1 || PRD-CO-M-FI-IbornTenacity == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-SecondaryMutation,1,0 _CrypticPoints,PRD-CO-M-FI-SecondaryMutation == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-VoltanicPotential,1,0 _CrypticPoints,PRD-CO-M-FI-VoltanicPotential == 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-WarpToJetsDevice,1,0 _CrypticPoints,CORecruitUpgradedBonus > 1 || CrypticEmployee == 1 || Press == 1
+PRD-CO-M-FI-WarpToPowerhouseDevice,1,0 _CrypticPoints,CORecruitUpgradedBonus > 0 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-CP-MedalOfTanagra,1,0 _CrypticPoints,TanagraHero == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-FI-FedHoloBoff,1,0 _CrypticPoints,STORecruitBilledBonus > 0 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-FI-HoloTribble,1,0 _CrypticPoints,STORecruitUpgradedBonus >= 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-FI-KlgHoloBoff,1,0 _CrypticPoints,STORecruitBilledBonus > 0 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-S-GalaxyTier5,1,0 _CrypticPoints,STORecruitBilledBonus > 4 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-CareerOfficer,1,0 _CrypticPoints,STOLifetime == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-Courier,1,0 _CrypticPoints,STORecruitUpgradedBonus > 0 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-CrashTestTribble,1,0 _CrypticPoints,PRD-STO-M-PT-BorgTribble == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-MasterRecruiter,1,0 _CrypticPoints,STORecruitBilledBonus >= 5 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-Recruiter,1,0 _CrypticPoints,STORecruitBilledBonus >= 2 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TI-TamHero,1,0 _CrypticPoints,TanagraHero == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-TK-CaptainsTable,1,0 _CrypticPoints,STOLifetime == 1 || CrypticEmployee == 1 || Press == 1
+PRD-STO-M-PT-BorgTribble,1,0 _CrypticPoints,PRD-STO-M-PT-BorgTribble == 1 || CrypticEmployee == 1 || Press == 1

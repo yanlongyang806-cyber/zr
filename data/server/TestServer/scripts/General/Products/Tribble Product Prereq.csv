@@ -1,0 +1,2 @@
+name,internal,description,billingstatementidentifier,shards,permissions,reqsubs,subCategory,alvl,dependent,categories,dontAssociate,keyValueChanges,itemID,prices,taxClassification,prerequisites,daysGranted,subGranted,activationKeyPrefix,expireDays,xboxOfferID,xboxContentID,recruitUpgraded,referredProduct,recruitBilled
+PRD-STO-T,startrek,STO Public Test Shard,,playtest,AllBasicLevels: 1;AllBasicZones: 1;AllSocial: 1;AllTrade: 1;Upgraded: 1;XMPPAccess: 1,S-STO,,0,,pc-sto-web,,,,,0,PRD-STO-R > 0,0,,,0,0,0,,,

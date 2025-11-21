@@ -1,0 +1,3 @@
+Name,Currency,Internal Product,Discount,Prerequisites
+Memorial Day STO Discount,_CrypticPoints,StarTrek,20,PRD-STO-R == 1
+Memorial Day CO Discount,_CrypticPoints,fightclub,20,PRD-CO-R == 1

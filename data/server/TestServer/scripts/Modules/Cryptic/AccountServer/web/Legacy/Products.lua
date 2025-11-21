@@ -1,0 +1,32 @@
+require("cryptic/AccountServer.Web.Legacy");
+
+AccountServer.Web.Legacy.Products = {
+	prod_fields = {
+		"name",
+		"internal",
+		"description",
+		"billingstatementidentifier",
+		"shards",
+		"permissions",
+		"reqsubs",
+		"subCategory",
+		"alvl",
+		"dependent",
+		"categories",
+		"dontAssociate",
+		"keyValueChanges",
+		"itemID",
+		"prices",
+		"taxClassification",
+		"prerequisites",
+		"daysGranted",
+		"subGranted",
+		"activationKeyPrefix",
+		"expireDays",
+		"xboxOfferID",
+		"xboxContentID",
+		"recruitUpgraded",
+		"referredProduct",
+		"recruitBilled",
+	},
+};

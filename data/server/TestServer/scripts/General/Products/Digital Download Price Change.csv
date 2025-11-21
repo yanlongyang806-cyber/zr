@@ -1,0 +1,3 @@
+name,internal,description,billingstatementidentifier,shards,permissions,reqsubs,subCategory,alvl,dependent,categories,dontAssociate,keyValueChanges,itemID,prices,taxClassification,prerequisites,daysGranted,subGranted,activationKeyPrefix,expireDays,xboxOfferID,xboxContentID,recruitUpgraded,referredProduct,recruitBilled
+PRD-CO-DR,,,,,,,,,,,,,,"19.99 USD, 19.99 CAD, 15.99 EUR, 13.49 GBP, 120.25 DKK",,,,,,,,,,,
+PRD-STO-DR,,,,,,,,,,,,,,"29.99 USD, 29.99 CAD, 24.99 EUR, 19.99 GBP, 180.45 DKK",,,,,,,,,,,

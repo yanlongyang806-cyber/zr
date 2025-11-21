@@ -1,0 +1,5 @@
+Name,Currency,Internal Product,Discount,Prerequisites
+Cryptic Employee STO Discount,_CrypticPoints,StarTrek,100,CrypticEmployee == 1
+Cryptic Employee CO Discount,_CrypticPoints,fightclub,100,CrypticEmployee == 1
+Press STO Discount,_CrypticPoints,StarTrek,100,Press == 1
+Press CO Discount,_CrypticPoints,fightclub,100,Press == 1

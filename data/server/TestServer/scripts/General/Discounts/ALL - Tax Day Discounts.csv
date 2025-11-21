@@ -1,0 +1,3 @@
+Currency,Internal Product,Discount,Prerequisites
+_CrypticPoints,StarTrek,25,PRD-STO-R == 1
+_CrypticPoints,fightclub,25,PRD-CO-R == 1
