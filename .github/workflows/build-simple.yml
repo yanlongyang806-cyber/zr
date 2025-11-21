@@ -53,7 +53,9 @@ jobs:
           exit /b 1
         )
         echo 使用解决方案: %CD%\NNOGameServer.sln
-        msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
+        echo 可用的配置: Debug|Win32, Full Debug|Win32, Code Coverage|Win32
+        echo 使用配置: Debug|Win32
+        msbuild NNOGameServer.sln /p:Configuration=Debug /p:Platform=Win32 /m /v:minimal /t:Build
         if %ERRORLEVEL% NEQ 0 (
           echo [ERROR] 编译失败
           exit /b 1
