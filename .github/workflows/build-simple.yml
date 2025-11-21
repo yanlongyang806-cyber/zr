@@ -1,0 +1,63 @@
+name: 编译 GameServer (简化版)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      
+    - name: 安装 Visual Studio 2022
+      uses: microsoft/setup-msbuild@v1.1
+      
+    - name: 查找解决方案文件
+      run: |
+        echo "查找 .sln 文件..."
+        dir /s /b *.sln | findstr /i "GameServer"
+        
+    - name: 编译 GameServer
+      run: |
+        echo "========================================"
+        echo "开始编译 GameServer"
+        echo "========================================"
+        
+        REM 尝试不同的解决方案路径
+        if exist "src\Night\GameServer\NNOGameServer.sln" (
+          echo "找到: src\Night\GameServer\NNOGameServer.sln"
+          cd src\Night\GameServer
+          msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
+        ) else if exist "src\Night\GameServer\*.sln" (
+          echo "找到其他 .sln 文件"
+          cd src\Night\GameServer
+          for %%f in (*.sln) do (
+            echo "编译: %%f"
+            msbuild "%%f" /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
+          )
+        ) else (
+          echo "错误: 未找到 GameServer 解决方案文件"
+          exit 1
+        )
+        
+    - name: 查找编译输出
+      run: |
+        echo "查找 GameServer.exe..."
+        dir /s /b GameServer.exe
+        
+    - name: 上传构建产物
+      uses: actions/upload-artifact@v4
+      if: success()
+      with:
+        name: GameServer-Build
+        path: |
+          **/GameServer.exe
+          **/GameServer.pdb
+        retention-days: 7
+

@@ -1,0 +1,114 @@
+name: 编译 GameServer 和 AutoLoadLua
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: 设置 MSBuild 路径
+      uses: microsoft/setup-msbuild@v1.1
+      
+    - name: 安装 Visual Studio 构建工具
+      uses: microsoft/setup-msbuild@v1.1
+      
+    - name: 设置 Visual Studio 环境
+      uses: microsoft/setup-msbuild@v1.1
+      
+    - name: 编译 GameServer
+      run: |
+        echo "========================================"
+        echo "开始编译 GameServer"
+        echo "========================================"
+        cd src/Night/GameServer
+        msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal
+        if %ERRORLEVEL% NEQ 0 (
+          echo "GameServer 编译失败"
+          exit 1
+        )
+        echo "========================================"
+        echo "GameServer 编译完成"
+        echo "========================================"
+        
+    - name: 编译 AutoLoadLua.dll
+      run: |
+        echo "========================================"
+        echo "开始编译 AutoLoadLua.dll"
+        echo "========================================"
+        cd tools/AutoLoadLua
+        if exist AutoLoadLua.cpp (
+          cl /LD /EHsc /O2 /W3 AutoLoadLua.cpp /link /OUT:AutoLoadLua.dll /DEF:AutoLoadLua.def kernel32.lib
+          if %ERRORLEVEL% NEQ 0 (
+            echo "AutoLoadLua.dll 编译失败"
+            exit 1
+          )
+          echo "========================================"
+          echo "AutoLoadLua.dll 编译完成"
+          echo "========================================"
+        ) else (
+          echo "警告: AutoLoadLua.cpp 不存在，跳过编译"
+        )
+        
+    - name: 编译 Injector.exe
+      run: |
+        echo "========================================"
+        echo "开始编译 Injector.exe"
+        echo "========================================"
+        cd tools/AutoLoadLua
+        if exist Injector.cpp (
+          cl /EHsc /O2 /W3 Injector.cpp /link /OUT:Injector.exe
+          if %ERRORLEVEL% NEQ 0 (
+            echo "Injector.exe 编译失败"
+            exit 1
+          )
+          echo "========================================"
+          echo "Injector.exe 编译完成"
+          echo "========================================"
+        ) else (
+          echo "警告: Injector.cpp 不存在，跳过编译"
+        )
+        
+    - name: 创建构建产物目录
+      run: |
+        mkdir build_artifacts
+        
+    - name: 复制 GameServer.exe
+      run: |
+        if exist "src\Night\GameServer\x64\Release\GameServer.exe" (
+          copy "src\Night\GameServer\x64\Release\GameServer.exe" "build_artifacts\GameServer.exe"
+          echo "GameServer.exe 已复制"
+        ) else (
+          echo "警告: GameServer.exe 未找到"
+        )
+        
+    - name: 复制 AutoLoadLua.dll
+      run: |
+        if exist "tools\AutoLoadLua\AutoLoadLua.dll" (
+          copy "tools\AutoLoadLua\AutoLoadLua.dll" "build_artifacts\AutoLoadLua.dll"
+          echo "AutoLoadLua.dll 已复制"
+        )
+        
+    - name: 复制 Injector.exe
+      run: |
+        if exist "tools\AutoLoadLua\Injector.exe" (
+          copy "tools\AutoLoadLua\Injector.exe" "build_artifacts\Injector.exe"
+          echo "Injector.exe 已复制"
+        )
+        
+    - name: 上传构建产物
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts
+        path: build_artifacts/
+        retention-days: 30

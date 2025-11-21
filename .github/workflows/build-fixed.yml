@@ -1,0 +1,134 @@
+name: 编译 GameServer (修复版)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: 安装 Visual Studio 2022
+      uses: microsoft/setup-msbuild@v1.1
+      
+    - name: 显示环境信息
+      run: |
+        echo "Visual Studio 版本:"
+        where msbuild
+        msbuild -version
+        
+    - name: 查找解决方案文件
+      run: |
+        echo "查找 GameServer 解决方案文件..."
+        if exist "src\Night\GameServer\NNOGameServer.sln" (
+          echo "✓ 找到: src\Night\GameServer\NNOGameServer.sln"
+        ) else (
+          echo "✗ 未找到解决方案文件"
+          dir /s /b *.sln | findstr /i "GameServer" | head -5
+        )
+        
+    - name: 编译 GameServer
+      run: |
+        echo "========================================"
+        echo "开始编译 GameServer"
+        echo "========================================"
+        
+        set SOLUTION_PATH=src\Night\GameServer\NNOGameServer.sln
+        
+        if not exist "%SOLUTION_PATH%" (
+          echo "错误: 解决方案文件不存在: %SOLUTION_PATH%"
+          echo "尝试查找其他解决方案文件..."
+          for /r %%f in (*.sln) do (
+            echo "找到: %%f"
+          )
+          exit 1
+        )
+        
+        echo "使用解决方案: %SOLUTION_PATH%"
+        cd src\Night\GameServer
+        
+        msbuild NNOGameServer.sln ^
+          /p:Configuration=Release ^
+          /p:Platform=Win32 ^
+          /m ^
+          /v:minimal ^
+          /t:Build ^
+          /fl ^
+          /flp:logfile=build.log;verbosity=minimal
+        
+        if %ERRORLEVEL% NEQ 0 (
+          echo "========================================"
+          echo "编译失败，查看日志:"
+          echo "========================================"
+          if exist build.log (
+            type build.log | findstr /i "error"
+          )
+          exit 1
+        )
+        
+        echo "========================================"
+        echo "GameServer 编译成功"
+        echo "========================================"
+        
+    - name: 查找编译输出
+      run: |
+        echo "查找 GameServer.exe..."
+        echo "查找 GameServer.exe..."
+        if exist "Win32\Release\GameServer.exe" (
+          echo "找到: Win32\Release\GameServer.exe"
+          dir "Win32\Release\GameServer.exe"
+        ) else (
+          echo "在以下位置查找:"
+          for /r %%f in (GameServer.exe) do (
+            echo "找到: %%f"
+            dir "%%f"
+          )
+        )
+        
+    - name: 创建构建产物目录
+      run: |
+        mkdir build_artifacts 2>nul
+        
+    - name: 复制 GameServer.exe
+      run: |
+        set FOUND=0
+        for /r %%f in (GameServer.exe) do (
+          if exist "%%f" (
+            copy "%%f" "build_artifacts\GameServer.exe"
+            echo "✓ 已复制: %%f -> build_artifacts\GameServer.exe"
+            set FOUND=1
+          )
+        )
+        if %FOUND%==0 (
+          echo "警告: 未找到 GameServer.exe"
+        )
+        
+    - name: 复制 PDB 文件
+      run: |
+        for /r %%f in (GameServer.pdb) do (
+          if exist "%%f" (
+            copy "%%f" "build_artifacts\GameServer.pdb"
+            echo "✓ 已复制: %%f"
+          )
+        )
+        
+    - name: 上传构建产物
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: GameServer-Build-Artifacts
+        path: |
+          build_artifacts/
+          src/Night/GameServer/build.log
+        retention-days: 7
+        if-no-files-found: warn
+

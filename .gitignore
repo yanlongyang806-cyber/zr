@@ -1,0 +1,85 @@
+# 编译输出
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ilk
+*.log
+*.tlog
+*.idb
+*.pch
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 构建目录
+build/
+build_artifacts/
+x64/
+x86/
+Release/
+Debug/
+bin/
+obj/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# 日志文件
+*.log
+logs/
+
+# 数据库文件
+*.db
+*.sqlite
+*.mdb
+
+# 压缩包
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 特定文件
+CrypticError.log
+*.pa
+*.pam
+
+# 本地数据
+localdata/
+cache/
+accountdb/
+chatdb/
+objectdb/
+
+# 备份目录
+backup_*/
+*_backup/
+
+# 测试文件
+test_*
+*_test.*
+
