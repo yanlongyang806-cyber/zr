@@ -23,44 +23,46 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       
     - name: 编译 AutoLoadLua.dll
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "编译 AutoLoadLua.dll"
-        echo "========================================"
+        echo ========================================
+        echo 编译 AutoLoadLua.dll
+        echo ========================================
         cd tools\AutoLoadLua
         
         if not exist AutoLoadLua.cpp (
-          echo "错误: AutoLoadLua.cpp 不存在"
-          exit 1
+          echo [ERROR] AutoLoadLua.cpp 不存在
+          exit /b 1
         )
         
         cl /LD /EHsc /O2 /W3 AutoLoadLua.cpp /link /OUT:AutoLoadLua.dll /DEF:AutoLoadLua.def kernel32.lib
         
         if %ERRORLEVEL% NEQ 0 (
-          echo "编译失败"
-          exit 1
+          echo [ERROR] 编译失败
+          exit /b 1
         )
         
-        echo "========================================"
-        echo "AutoLoadLua.dll 编译成功"
-        echo "========================================"
+        echo ========================================
+        echo AutoLoadLua.dll 编译成功
+        echo ========================================
         
     - name: 编译 Injector.exe
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "编译 Injector.exe"
-        echo "========================================"
+        echo ========================================
+        echo 编译 Injector.exe
+        echo ========================================
         cd tools\AutoLoadLua
         
         if exist Injector.cpp (
           cl /EHsc /O2 /W3 Injector.cpp /link /OUT:Injector.exe
           if %ERRORLEVEL% NEQ 0 (
-            echo "Injector.exe 编译失败"
-            exit 1
+            echo [ERROR] Injector.exe 编译失败
+            exit /b 1
           )
-          echo "Injector.exe 编译成功"
+          echo [OK] Injector.exe 编译成功
         ) else (
-          echo "警告: Injector.cpp 不存在"
+          echo [WARNING] Injector.cpp 不存在
         )
         
     - name: 上传构建产物

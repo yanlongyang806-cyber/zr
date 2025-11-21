@@ -19,36 +19,39 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       
     - name: 查找解决方案文件
+      shell: cmd
       run: |
-        echo "查找 .sln 文件..."
+        echo 查找 .sln 文件...
         dir /s /b *.sln | findstr /i "GameServer"
         
     - name: 编译 GameServer
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "开始编译 GameServer"
-        echo "========================================"
+        echo ========================================
+        echo 开始编译 GameServer
+        echo ========================================
         
         REM 尝试不同的解决方案路径
         if exist "src\Night\GameServer\NNOGameServer.sln" (
-          echo "找到: src\Night\GameServer\NNOGameServer.sln"
+          echo 找到: src\Night\GameServer\NNOGameServer.sln
           cd src\Night\GameServer
           msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
         ) else if exist "src\Night\GameServer\*.sln" (
-          echo "找到其他 .sln 文件"
+          echo 找到其他 .sln 文件
           cd src\Night\GameServer
           for %%f in (*.sln) do (
-            echo "编译: %%f"
+            echo 编译: %%f
             msbuild "%%f" /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
           )
         ) else (
-          echo "错误: 未找到 GameServer 解决方案文件"
-          exit 1
+          echo 错误: 未找到 GameServer 解决方案文件
+          exit /b 1
         )
         
     - name: 查找编译输出
+      shell: cmd
       run: |
-        echo "查找 GameServer.exe..."
+        echo 查找 GameServer.exe...
         dir /s /b GameServer.exe
         
     - name: 上传构建产物

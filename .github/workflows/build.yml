@@ -27,83 +27,90 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       
     - name: 编译 GameServer
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "开始编译 GameServer"
-        echo "========================================"
-        cd src/Night/GameServer
+        echo ========================================
+        echo 开始编译 GameServer
+        echo ========================================
+        cd src\Night\GameServer
         msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal
         if %ERRORLEVEL% NEQ 0 (
-          echo "GameServer 编译失败"
-          exit 1
+          echo [ERROR] GameServer 编译失败
+          exit /b 1
         )
-        echo "========================================"
-        echo "GameServer 编译完成"
-        echo "========================================"
+        echo ========================================
+        echo GameServer 编译完成
+        echo ========================================
         
     - name: 编译 AutoLoadLua.dll
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "开始编译 AutoLoadLua.dll"
-        echo "========================================"
-        cd tools/AutoLoadLua
+        echo ========================================
+        echo 开始编译 AutoLoadLua.dll
+        echo ========================================
+        cd tools\AutoLoadLua
         if exist AutoLoadLua.cpp (
           cl /LD /EHsc /O2 /W3 AutoLoadLua.cpp /link /OUT:AutoLoadLua.dll /DEF:AutoLoadLua.def kernel32.lib
           if %ERRORLEVEL% NEQ 0 (
-            echo "AutoLoadLua.dll 编译失败"
-            exit 1
+            echo [ERROR] AutoLoadLua.dll 编译失败
+            exit /b 1
           )
-          echo "========================================"
-          echo "AutoLoadLua.dll 编译完成"
-          echo "========================================"
+          echo ========================================
+          echo AutoLoadLua.dll 编译完成
+          echo ========================================
         ) else (
-          echo "警告: AutoLoadLua.cpp 不存在，跳过编译"
+          echo [WARNING] AutoLoadLua.cpp 不存在，跳过编译
         )
         
     - name: 编译 Injector.exe
+      shell: cmd
       run: |
-        echo "========================================"
-        echo "开始编译 Injector.exe"
-        echo "========================================"
-        cd tools/AutoLoadLua
+        echo ========================================
+        echo 开始编译 Injector.exe
+        echo ========================================
+        cd tools\AutoLoadLua
         if exist Injector.cpp (
           cl /EHsc /O2 /W3 Injector.cpp /link /OUT:Injector.exe
           if %ERRORLEVEL% NEQ 0 (
-            echo "Injector.exe 编译失败"
-            exit 1
+            echo [ERROR] Injector.exe 编译失败
+            exit /b 1
           )
-          echo "========================================"
-          echo "Injector.exe 编译完成"
-          echo "========================================"
+          echo ========================================
+          echo Injector.exe 编译完成
+          echo ========================================
         ) else (
-          echo "警告: Injector.cpp 不存在，跳过编译"
+          echo [WARNING] Injector.cpp 不存在，跳过编译
         )
         
     - name: 创建构建产物目录
+      shell: cmd
       run: |
-        mkdir build_artifacts
+        if not exist build_artifacts mkdir build_artifacts
         
     - name: 复制 GameServer.exe
+      shell: cmd
       run: |
-        if exist "src\Night\GameServer\x64\Release\GameServer.exe" (
-          copy "src\Night\GameServer\x64\Release\GameServer.exe" "build_artifacts\GameServer.exe"
-          echo "GameServer.exe 已复制"
+        if exist "src\Night\GameServer\Win32\Release\GameServer.exe" (
+          copy "src\Night\GameServer\Win32\Release\GameServer.exe" "build_artifacts\GameServer.exe"
+          echo [OK] GameServer.exe 已复制
         ) else (
-          echo "警告: GameServer.exe 未找到"
+          echo [WARNING] GameServer.exe 未找到
         )
         
     - name: 复制 AutoLoadLua.dll
+      shell: cmd
       run: |
         if exist "tools\AutoLoadLua\AutoLoadLua.dll" (
           copy "tools\AutoLoadLua\AutoLoadLua.dll" "build_artifacts\AutoLoadLua.dll"
-          echo "AutoLoadLua.dll 已复制"
+          echo [OK] AutoLoadLua.dll 已复制
         )
         
     - name: 复制 Injector.exe
+      shell: cmd
       run: |
         if exist "tools\AutoLoadLua\Injector.exe" (
           copy "tools\AutoLoadLua\Injector.exe" "build_artifacts\Injector.exe"
-          echo "Injector.exe 已复制"
+          echo [OK] Injector.exe 已复制
         )
         
     - name: 上传构建产物
