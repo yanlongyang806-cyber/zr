@@ -256,14 +256,3 @@
   <ItemGroup>
     <ProjectReference Include="..\StructParserStub\StructParserStub.vcxproj">
       <Project>{1d29e421-93b2-4e32-9186-7fafc3971c5b}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
-</Project>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
-</Project>
