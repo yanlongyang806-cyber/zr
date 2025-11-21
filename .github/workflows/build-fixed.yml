@@ -61,7 +61,7 @@ jobs:
         echo 当前工作目录: %CD%
         
         msbuild NNOGameServer.sln ^
-          /p:Configuration=Release ^
+          /p:Configuration=Debug ^
           /p:Platform=Win32 ^
           /m ^
           /v:minimal ^

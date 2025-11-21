@@ -33,7 +33,7 @@ jobs:
         echo 开始编译 GameServer
         echo ========================================
         cd src\Night\GameServer
-        msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal
+        msbuild NNOGameServer.sln /p:Configuration=Debug /p:Platform=Win32 /m /v:minimal
         if %ERRORLEVEL% NEQ 0 (
           echo [ERROR] GameServer 编译失败
           exit /b 1
