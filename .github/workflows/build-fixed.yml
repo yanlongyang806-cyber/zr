@@ -57,7 +57,8 @@ jobs:
         )
         
         echo 使用解决方案: %SOLUTION_PATH%
-        cd src\Night\GameServer
+        cd /d %CD%\src\Night\GameServer
+        echo 当前工作目录: %CD%
         
         msbuild NNOGameServer.sln ^
           /p:Configuration=Release ^

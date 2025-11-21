@@ -24,29 +24,43 @@ jobs:
         echo 查找 .sln 文件...
         dir /s /b *.sln | findstr /i "GameServer"
         
+    - name: 检查解决方案文件
+      shell: cmd
+      run: |
+        echo ========================================
+        echo 检查解决方案文件
+        echo ========================================
+        echo 当前目录: %CD%
+        if exist "src\Night\GameServer\NNOGameServer.sln" (
+          echo [OK] 找到: src\Night\GameServer\NNOGameServer.sln
+        ) else (
+          echo [ERROR] 未找到解决方案文件
+          echo 查找所有 .sln 文件:
+          dir /s /b *.sln 2>nul | findstr /i "GameServer"
+          exit /b 1
+        )
+        
     - name: 编译 GameServer
       shell: cmd
       run: |
         echo ========================================
         echo 开始编译 GameServer
         echo ========================================
-        
-        REM 尝试不同的解决方案路径
-        if exist "src\Night\GameServer\NNOGameServer.sln" (
-          echo 找到: src\Night\GameServer\NNOGameServer.sln
-          cd src\Night\GameServer
-          msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
-        ) else if exist "src\Night\GameServer\*.sln" (
-          echo 找到其他 .sln 文件
-          cd src\Night\GameServer
-          for %%f in (*.sln) do (
-            echo 编译: %%f
-            msbuild "%%f" /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
-          )
-        ) else (
-          echo 错误: 未找到 GameServer 解决方案文件
+        cd /d %CD%\src\Night\GameServer
+        echo 当前目录: %CD%
+        if not exist "NNOGameServer.sln" (
+          echo [ERROR] 解决方案文件不存在
           exit /b 1
         )
+        echo 使用解决方案: %CD%\NNOGameServer.sln
+        msbuild NNOGameServer.sln /p:Configuration=Release /p:Platform=Win32 /m /v:minimal /t:Build
+        if %ERRORLEVEL% NEQ 0 (
+          echo [ERROR] 编译失败
+          exit /b 1
+        )
+        echo ========================================
+        echo GameServer 编译完成
+        echo ========================================
         
     - name: 查找编译输出
       shell: cmd

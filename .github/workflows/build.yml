@@ -90,11 +90,21 @@ jobs:
     - name: 复制 GameServer.exe
       shell: cmd
       run: |
-        if exist "src\Night\GameServer\Win32\Release\GameServer.exe" (
-          copy "src\Night\GameServer\Win32\Release\GameServer.exe" "build_artifacts\GameServer.exe"
-          echo [OK] GameServer.exe 已复制
-        ) else (
-          echo [WARNING] GameServer.exe 未找到
+        echo 查找 GameServer.exe...
+        set FOUND=0
+        for /r %%f in (GameServer.exe) do (
+          if exist "%%f" (
+            copy "%%f" "build_artifacts\GameServer.exe"
+            echo [OK] 已复制: %%f
+            set FOUND=1
+            goto :found
+          )
+        )
+        :found
+        if %FOUND%==0 (
+          echo [WARNING] 未找到 GameServer.exe
+          echo 查找位置:
+          dir /s /b GameServer.exe 2>nul
         )
         
     - name: 复制 AutoLoadLua.dll
